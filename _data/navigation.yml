@@ -1,0 +1,17 @@
+# Top menu, left to right. `url` is the page address: index.md -> /, people.md -> /people.html
+# (teaching.md and publications.md exist but are not in the menu, as on the original site.)
+
+- title: Home
+  url: /
+- title: Capabilities
+  url: /capabilities.html
+- title: People
+  url: /people.html
+- title: Research
+  url: /research.html
+- title: Datasets
+  url: /datasets.html
+- title: Moments
+  url: /moments.html
+- title: Opportunities
+  url: /opportunities.html

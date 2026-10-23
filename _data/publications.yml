@@ -1,0 +1,153 @@
+# Publications (Research page, "Recent Publications"), newest first.
+# The first 12 are shown; a "Show More" button reveals the rest.
+#
+#   year, journal:  shown as the card heading
+#   title:          paper title
+#   link:           URL the card opens
+
+- year: 2026
+  journal: International Journal of Disaster Risk Reduction
+  title: Revealing time-sensitive latent public health and emotional distress topics in Reddit discourse during the 2025 Southern California wildfires
+  link: https://www.sciencedirect.com/science/article/pii/S2212420926001792
+
+- year: 2026
+  journal: GeoHealth
+  title: "Developing Scenario-Based Strategies for Health, Climate, and Environmental Preparedness: The One Health, One Earth Approach"
+  link: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025GH001674
+
+- year: 2026
+  journal: Frontiers in Public Health
+  title: "Food delivery services for enhancing participation in the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) in the United States: bridging the WIC-eligible access gap"
+  link: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1756682/full
+
+- year: 2026
+  journal: ACS ES&T Air
+  title: The Cooling Needs to Reduce Indoor Humid-Heat Risks for Global Low-Income Populations Should Be Incorporated into Global Carbon Emission Reduction Plans
+  link: https://pubs.acs.org/doi/full/10.1021/acsestair.5c00341
+
+- year: 2026
+  journal: Diabetes, Obesity and Metabolism
+  title: "Transportation noise exposure and incident type 2 diabetes: A retrospective cohort study in a large U.S. healthcare system"
+  link: https://dom-pubs.onlinelibrary.wiley.com/doi/abs/10.1111/dom.70499
+
+- year: 2025
+  journal: The Lancet
+  title: "The 2025 report of the Lancet Countdown on health and climate change:   Climate change actions offers a lifeline"
+  link: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01919-1/fulltext
+
+- year: 2025
+  journal: Indoor and Built Environment
+  title: Health impact reduction design strategies according to the circulation pattern of indoor PM2.5 using computational fluid dynamics models
+  link: https://journals.sagepub.com/doi/abs/10.1177/1420326X251324368
+
+- year: 2025
+  journal: "Environment and Planning B: Urban Analytics and City Science"
+  title: Urban planning and IPCC-like city assessments integration for climate-resilient cities
+  link: https://journals.sagepub.com/doi/10.1177/23998083251330940
+
+- year: 2025
+  journal: Science of The Total Environment
+  title: Application of multi-angle spaceborne observations in characterizing the long-term particulate organic carbon pollution in China
+  link: https://www.sciencedirect.com/science/article/abs/pii/S0048969724080409
+
+- year: 2024
+  journal: The Lancet
+  title: "The 2024 report of the Lancet Countdown on health and climate change: facing record-breaking threats from delayed action"
+  link: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01822-1/abstract
+
+- year: 2024
+  journal: Kidney International Reports
+  title: Elevated ambient temperature associates with increased CVD-risk among hemodialysis patients
+  link: https://www.sciencedirect.com/science/article/pii/S2468024924018448
+
+- year: 2024
+  journal: Science of The Total Environment
+  title: "Urban heatwave, green spaces, and mental health: A review based on environmental health risk assessment framework"
+  link: https://www.sciencedirect.com/science/article/pii/S0048969724049659
+
+- year: 2024
+  journal: Atmospheric Chemistry and Physics
+  title: Long-term variability in black carbon emissions constrained by gap-filled absorption aerosol optical depth and associated premature mortality in China
+  link: https://acp.copernicus.org/articles/24/6593/2024/
+
+- year: 2024
+  journal: Center for Houston’s Future
+  title: "Houston's future: the intersection of climate change and health care"
+  link: https://www.futurehouston.org/climateandhealth/
+
+- year: 2023
+  journal: The Lancet
+  title: "The 2023 report of the Lancet Countdown on health and
+climate change: the imperative for a health-centred response
+in a world facing irreversible harms"
+  link: https://www.sciencedirect.com/science/article/pii/S0140673623018597?dgcid=coauthor
+
+- year: 2023
+  journal: Environmental Research Letters
+  title: Atmospheric elemental carbon pollution and its regional health disparities in China
+  link: https://iopscience.iop.org/article/10.1088/1748-9326/ad0862
+
+- year: 2023
+  journal: Journal of the American Society of Nephrology
+  title: Exposure to elevated temperature is associated with elevated risk for CVD outcomes and mortality among hemodialysis patients in the US
+  link: https://journals.lww.com/jasn/pages/articleviewer.aspx?year=2023&issue=11001&article=00582&type=Citation
+
+- year: 2023
+  journal: Environmental Science & Technology
+  title: Wildland fires worsened population exposure to PM2.5 pollution in the contiguous United States
+  link: https://pubs.acs.org/doi/epdf/10.1021/acs.est.3c05143
+
+- year: 2023
+  journal: Environment International
+  title: A satellite-driven model to estimate long-term particulate sulfate levels and attributable mortality burden in China
+  link: https://www.sciencedirect.com/science/article/pii/S0160412023000132
+
+- year: 2023
+  journal: Science of The Total Environment
+  title: Optimizing modeling windows to better capture the long-term variation of PM2.5 concentrations in China during 2005–2019
+  link: https://www.sciencedirect.com/science/article/abs/pii/S0048969722057230
+
+- year: 2023
+  journal: Meteorological Applications
+  title: "The role of global reanalyses in climate services for health: Insights from the Lancet Countdown"
+  link: https://rmets.onlinelibrary.wiley.com/doi/10.1002/met.2122
+
+- year: 2023
+  journal: Climate Dynamics
+  title: The reduced Siberian spring snow cover modulation on southward northernmost margin of East Asia summer monsoon
+  link: https://link.springer.com/article/10.1007/s00382-023-06732-8
+
+- year: 2022
+  journal: The Lancet
+  title: "The 2022 report of the Lancet Countdown on health and climate change: health at the mercy of fossil fuels"
+  link: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01540-9/fulltext
+
+- year: 2022
+  journal: iScience
+  title: Assessment of long-term particulate nitrate air pollution and its health risk in China
+  link: https://www.sciencedirect.com/science/article/pii/S2589004222011713
+
+- year: 2021
+  journal: Bulletin of the American Meteorological Society
+  title: Improving climate literacy through an interactive online undergraduate course
+  link: https://journals.ametsoc.org/view/journals/bams/102/6/BAMS-D-19-0271.A.xml
+
+- year: 2021
+  journal: Lancet Countdown U.S. Policy Brief
+  title: 2021 Lancet Countdown on health and climate change policy brief for the United States of America
+  link: https://www.lancetcountdownus.org/2021-lancet-countdown-us-brief/
+
+- year: 2020
+  journal: Bulletin of the American Meteorological Society
+  title: "An interactive online course in climate and climate change: advancing climate literacy for non–atmospheric science majors"
+  link: https://journals.ametsoc.org/view/journals/bams/101/10/bamsD190271.xml
+
+- year: 2019
+  journal: Journal of Climate
+  title: "Reassessing the effect of cloud type on Earth’s energy balance in the age of active spaceborne observations. Part II: atmospheric heating"
+  link: https://journals.ametsoc.org/view/journals/clim/32/19/jcli-d-18-0754.1.xml
+
+- year: 2019
+  journal: Journal of Climate
+  title: "Reassessing the effect of cloud type on Earth’s energy balance in the age of active spaceborne observations Part I: top of atmosphere and surface"
+  link: https://journals.ametsoc.org/view/journals/clim/32/19/jcli-d-18-0753.1.xml

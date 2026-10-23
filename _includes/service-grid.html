@@ -1,0 +1,6 @@
+{%- comment -%} Picture grid on the Capabilities page. Parameter: items (list of title + image). {%- endcomment -%}
+<div class="services">
+{%- for s in include.items %}
+<figure class="service"><img src="images/{{ s.image }}" alt="{{ s.title | escape }}" loading="lazy"><figcaption>({{ forloop.index }}) {{ s.title }}</figcaption></figure>
+{%- endfor %}
+</div>

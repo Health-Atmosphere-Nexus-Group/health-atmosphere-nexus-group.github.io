@@ -1,0 +1,28 @@
+# Site-wide settings. (When previewing locally, restart `jekyll serve` after editing this file.)
+
+title: "Yun Hang | UTSPH Health-Atmosphere Nexus Group"   # browser-tab title of the home page
+short_title: HANG                                        # other pages show "Page | HANG"
+description: >-
+  Dr. Hang is a professor at the University of Texas Health Science Center who studies
+  the impact of air pollution, extreme weather, and natural disasters on human health.
+
+theme: null   # GitHub Pages would otherwise add its default theme (Primer); this site has its own layouts
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: apos,apos,quot,quot   # keep quotes exactly as typed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

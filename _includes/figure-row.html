@@ -1,0 +1,6 @@
+{%- comment -%} Row of square pictures that open full size when clicked. Parameter: images (list of files in images/). {%- endcomment -%}
+<div class="figures">
+{%- for img in include.images %}
+<a class="figure" href="images/{{ img }}" data-lightbox><img src="images/{{ img }}" alt="Figure {{ forloop.index }}" loading="lazy"></a>
+{%- endfor %}
+</div>

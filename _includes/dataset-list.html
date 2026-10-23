@@ -1,0 +1,27 @@
+{%- comment -%} Renders _data/datasets.yml; shows a short note while the list is empty. {%- endcomment -%}
+{%- if site.data.datasets and site.data.datasets.size > 0 %}
+<div class="datasets">
+{%- for d in site.data.datasets %}
+<article class="dataset">
+{%- if d.image %}<a class="dataset-image" href="{{ d.zenodo }}" target="_blank" rel="noopener"><img src="images/{{ d.image }}" alt="{{ d.title | escape }}" loading="lazy"></a>{% endif %}
+<div class="dataset-text">
+<h3 class="dataset-title"><a href="{{ d.zenodo }}" target="_blank" rel="noopener">{{ d.title }}</a></h3>
+{%- capture meta %}{{ d.year }}{% if d.year and d.license %} · {% endif %}{{ d.license }}{% endcapture %}
+{%- if meta != "" %}
+<p class="dataset-meta">{{ meta }}</p>
+{%- endif %}
+{%- if d.authors %}
+<p class="dataset-authors">{{ d.authors }}</p>
+{%- endif %}
+<div class="dataset-desc">{{ d.description | markdownify }}</div>
+<p class="dataset-links"><a class="dataset-button" href="{{ d.zenodo }}" target="_blank" rel="noopener">View on Zenodo</a>
+{%- if d.doi %}<a href="https://doi.org/{{ d.doi }}" target="_blank" rel="noopener">DOI: {{ d.doi }}</a>{% endif %}
+{%- if d.paper %}<a href="{{ d.paper }}" target="_blank" rel="noopener">Related publication</a>{% endif -%}
+</p>
+</div>
+</article>
+{%- endfor %}
+</div>
+{%- else %}
+<p class="datasets-empty">Datasets will be posted here soon.</p>
+{%- endif %}

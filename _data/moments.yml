@@ -1,0 +1,212 @@
+# Moments page, newest first. Photos/videos alternate left and right automatically.
+#
+#   title:    headline (orange serif type)
+#   date:     free text, e.g. "May 2026" or "Pinned"
+#   image:    file in images/ (any size; it is cropped to 470x255)
+#   youtube:  instead of an image, a YouTube link (https://www.youtube.com/watch?v=...)
+#   text:     Markdown text
+
+- title: Snapshots of collaborative learning across disciplines
+  date: Pinned
+  youtube: https://www.youtube.com/watch?v=MBH6_Xupi4I
+  text: |
+    At UTHealth School of Public Health, we connect students and faculty across six campuses, including Austin, Brownsville, Dallas, El Paso, Houston, and San Antonio. Our group is based at the Houston campus. This video captures moments from our hybrid class and group meeting, bringing together in-person and virtual participants from environmental and occupational health, epidemiology, and biostatistics across multiple campuses.
+
+- title: Uma and Yun co-taught environmental epidemiology
+  date: May 2026
+  image: moments/2026-05-uma-and-yun-co-taught.jpg
+  text: |
+    Another exciting year offering the Environmental Epidemiology class at UTHealth. It was exciting to see students’ final projects on the application of NASA data and models in public health research. Students from Epidemiology, Environmental and Occupational Health, Occupational Medicine residents, and faculty from the Southwest Center for Occupational & Environmental Health came together.
+
+- title: Students pass PhD Preliminary Exams
+  date: February 2026
+  image: moments/2026-02-students-pass-phd-preliminary-exams.png
+  text: |
+    Uma, Zhengyi, and Aodong all passed their PhD preliminary exams on the first try and officially advanced to PhD candidacy. They have also formed their dissertation committees. A major milestone and well deserved achievement. Big congratulations to all three of them!
+
+- title: NASA HAQ Leadership Visits UTHealth
+  date: January 2026
+  image: moments/2026-01-nasa-haq-leadership-visits-uthealth.jpg
+  text: |
+    We were honored to welcome leaders from NASA Earth Action’s Health and Air Quality team to the seminar, "Advancing Public Health with Satellite Data: Spatiotemporal Approaches for Environmental Monitoring and Action." The event showcased how satellite observations are being transformed into actionable tools for tracking air pollution, wildfire smoke, and emerging environmental health risks, while highlighting the growing role of Earth science data in supporting public health decision-making.
+
+- title: 2026 AMS Annual Meeting
+  date: January 2026
+  image: moments/2026-01-2026-ams-annual-meeting.jpg
+  text: |
+    Group members Yue, Zhengyi, and Yun participated in the annual American Meteorological Society meeting through the environmental health section. Yue presented a poster examining the relationship between urban vegetation and air quality in Los Angeles. Zhengyi delivered an oral presentation on air pollution and health in Bangladesh. Yun also gave an oral presentation in the NASA Health and Air Quality Applied Sciences session titled Benefitting Decision Support Tools Using Earth Science Data.
+
+- title: 2025 AGU Annual Meeting
+  date: December 2025
+  image: moments/2025-12-2025-agu-annual-meeting.jpg
+  text: |
+    Group members Zhengyi, Aodong, Kathryn, and Yun traveled to New Orleans to attend the annual American Geophysical Union meeting. During the conference, we contributed to thirteen activities, including presenting research on air pollution, health, and AI, participating in geohealth initiatives, organizing early career networking events, and co chairing meeting sessions.
+
+- title: Friendsgiving and Baozi making competition
+  date: November 2025
+  image: moments/2025-11-friendsgiving-and-baozi-making-competition.jpg
+  text: |
+    We celebrated Thanksgiving as an annual tradition to reflect on the achievements of the past year. This year, we added a baozi making competition with three fillings: red bean, pork, and beef. The event highlighted everyone’s creativity, and Kathryn won first place!
+
+- title: Zhengyi won Jane Street Kaggle Silver Medal
+  date: October 2025
+  image: moments/2025-10-zhengyi-won-jane-street-kaggle.jpg
+  text: |
+    Zhengyi earned the 2025 Jane Street Real-Time Market Data Forecasting Silver Medal on Kaggle, ranking 52nd out of more than 8,000 participants worldwide. By rethinking the problem beyond time-series methods and applying ensemble learning, he achieved a top 1% finish, adding another milestone to his growing list of data science achievements.
+
+- title: Celebrating summer wins and surprises
+  date: September 2025
+  image: moments/2025-09-celebrating-summer-wins-and-surprises.jpg
+  text: |
+    Thanks to Uma’s thoughtful planning, our group meeting turned into a wonderful surprise celebration. Kathryn, Raya, Yating, and Crystal all reached exciting milestones this summer, with Crystal starting her new adventure at Stanford. Even the TV screen joined the moment, reflecting Zhengyi’s bright smile and the happiness shared across the room. Congratulations to everyone on such an inspiring and joy-filled season of accomplishments!
+
+- title: Yating passes PhD qualifying exam
+  date: September 2025
+  image: moments/2025-09-yating-passes-phd-qualifying-exam.png
+  text: |
+    Congratulations to Yating on passing her PhD Qualifying Examination. This milestone marks her move from coursework to independent research and provides the basis for her dissertation work. We are thrilled to celebrate this achievement and look forward to the exciting next stage of her PhD journey.
+
+- title: Group presented at ISES–ISEE & Kathryn won award
+  date: August 2025
+  image: moments/2025-08-group-presented-at-ises-isee.png
+  text: |
+    Group members participated in the 2025 ISES–ISEE Conference in Atlanta, joining peers from 68 countries to share advances in environmental health. In addition to presenting their research, Kathryn and Aodong served as session chairs, abstract reviewers, and poster judges. Excitingly, Kathryn received the prestigious ISES Travel Award, one of only 21 students selected worldwide from more than 300 applicants, including just 7 from the US. More details can be found in the [NEWS](https://sph.uth.edu/news/story/uthealth-houston-students-and-faculty-present-research-at-international-environmental-health-conference).
+
+- title: Aodong wins NASA Future Investigators Award
+  date: August 2025
+  image: moments/2025-08-aodong-wins-nasa-future-investigators.jpg
+  text: |
+    Under the mentorship of Dr. Hang, Aodong received the NASA Future Investigators in Earth and Space Science and Technology (FINESST) award, providing $150,000 for her research using satellite remote sensing and AI to study air pollution’s impact on infectious diseases. Her proposal was one of only 55 selected from 565 submissions, making her the first UTHealth student to receive this award and highlighting the intersection of public health and space technology. More information can be found in the [NEWS](https://www.uth.edu/news/story/uthealth-houston-student-partners-with-mentor-to-win-nasa-future-investigators-award).
+
+- title: 2025 group photo
+  date: July 2025
+  image: moments/2025-07-2025-group-photo.jpg
+  text: |
+    Here's our 2025 crew - new energy, familiar smiles, and plenty of teamwork. Together, we're committed to advancing public health through atmospheric science.
+
+    Front row (L to R): Uma, Aodong, Kathryn, Raya, Yun<br>
+    Back row (L to R): Crystal, Zhengyi, John, Yue, Yating<br>
+    (Not pictured: Sulong)
+
+- title: New internship program launched
+  date: June 2025
+  image: moments/2025-06-new-internship-program-launched.jpg
+  text: |
+    We're excited to launch HANG’s Internship Program, led by Uma Mary Govindswamy. Welcome Crystal Liu and Raya Patel! They'll receive training in data management, environmental health, community engagement, and science communication, guided by graduate students, faculty, and guest experts. Interns will build practical skills to address public health challenges and positively impact our community.
+
+- title: End-of-academic-year celebrations
+  date: May 2025
+  image: moments/2025-05-end-of-academic-year-celebrations.jpg
+  text: |
+    This year, Uma, Aodong, and Kathryn received school-wide fellowships. Kathryn also earned the competitive ISES-ISEE Travel Award, and Uma obtained the NSF-funded Travel Award. All PhD students have manuscripts in submission, and master's students are making strong progress. Five students presented research at conferences and public health agencies. Additionally, two students submitted their first research proposals. Congratulations on these remarkable achievements!
+
+- title: Congrats to Dr. John Nally on his MPH
+  date: May 2025
+  image: moments/2025-05-congrats-to-dr-john-nally.jpg
+  text: |
+    After two years of dedicated training in the UTHealth Occupational and Environmental Medicine Program, our group member Dr. John Nally has successfully earned his Master of Public Health degree! Congratulations on this outstanding milestone. We're excited for his continued engagement and contributions with HANG.
+
+- title: HANG presented at Texas Climate Conference
+  date: April 2025
+  image: moments/2025-04-hang-presented-at-texas-climate.jpg
+  text: |
+    Group members Uma, Aodong, and Kathryn presented their research on mental health, heat exposure, air pollution, and the integration of remote sensing and AI in exposure modeling at the 2025 Texas Climate Conference. Dr. Hang delivered a keynote address highlighting exposure modeling in extreme weather events, air pollution, and natural disasters across local to global scales.
+
+- title: Group members train in responsible AI use
+  date: February 2025
+  image: moments/2025-02-group-members-train-in-responsible.jpg
+  text: |
+    Group members Yating, Zhengyi, and Aodong attended the Ethical and Explainable GeoAI Workshop at TAMU, co-hosted by Dr. Sulong Zhou. The workshop brought together researchers, practitioners, and policymakers to discuss the development of transparent, fair, and accountable AI-enhanced geosystems. Students received training on the ethical challenges and societal implications of AI in applied research, emphasizing the importance of research transparency.
+
+- title: New publication on predicting organic carbon pollution
+  date: January 2025
+  image: moments/2025-01-new-publication-on-predicting-organic.png
+  text: |
+    With support from National Institutes of Health and Jet Propulsion Laboratory, we present a novel study that integrates spaceborne multi-angle sensor technology and ensemble machine learning techniques to predict long-term particulate organic carbon pollution and identify its sources. This research highlights the potential of remote sensing and advanced computational methods to improve air quality monitoring and source attribution.More details on the publication can be found [HERE](https://www.sciencedirect.com/science/article/pii/S0048969724080409).
+
+- title: AGU24 highlights
+  date: December 2024
+  image: moments/2024-12-agu24-highlights.jpg
+  text: |
+    Several group members attended the AGU24 Meeting in DC to present their research. The photo features PhD student Uma, who was invited to give an oral presentation on her work on extreme heat and drug overdoses. We co-hosted a series of successful events and meeting sessions on environmental health, funded by NSF and the AGU GeoHealth section. Dr. Hang was elected to the AGU leadership team as a council member, representing early career scientists from over 100 countries.
+
+- title: Happy Thanksgiving
+  date: November 2024
+  image: moments/2024-11-happy-thanksgiving.jpg
+  text: |
+    We had a small Thanksgiving party to celebrate all the progress and achievements this year. Dr. Nally has been leveling up his research and programming skills, Uma submitted her first manuscript, Aidong and Zhengyi are making great strides on their first projects, and Yue and Kathryn are starting to apply their interdisciplinary skills to environmental health research. Big thanks to everyone for all the hard work this year and excited for what’s next :)
+
+- title: Welcome Yue and Kathryn
+  date: September 2024
+  image: moments/2024-09-welcome-yue-and-kathryn.jpg
+  text: |
+    Welcome to our new master’s students! Yue completed her MS in City and Regional Planning at UNC-Chapel Hill and is interested in the relationship between air pollution, extreme heat, and their health impacts. Kathryn joins us through the Rice-UT 4+1 program, driven by her passion for applying chemistry and analytical skills to advance actionable initiatives in extreme weather and environmental health.<br>
+    Together, we took a group photo in November 2024.
+
+- title: Welcome new PhD students
+  date: August 2024
+  image: moments/2024-08-welcome-new-phd-students.jpg
+  text: |
+    We are excited to welcome our first cohort of EOHS PhD students, each with a diverse background. Zhengyi (MPH, NYU) was a professional poker player in the World Series of Poker Main Event. Uma (MPH, Emory) has extensive experience with national and international organizations focused on sustainable solutions. Aodong (MPA, Cornell) has been playing hockey and rock climbing for many years with a professional certificate. We wish them all an enjoyable PhD journey!
+
+- title: New publication on mental health
+  date: July 2024
+  image: moments/2024-07-new-publication-on-mental-health.png
+  text: |
+    The intensification of global warming has led to a rise in the frequency of heatwaves. Green space systems effectively mitigate heatwaves, slow the urban heat island effect, and enhance mental health. Motivated by these benefits, we examine the correlation between heatwaves, urban green spaces, and residents' mental health within an environmental health risk assessment framework.
+
+    Read the open-access publication [HERE](https://www.sciencedirect.com/science/article/pii/S0048969724049659).
+
+- title: Best wishes to our graduates
+  date: May 2024
+  image: moments/2024-05-best-wishes-to-our-graduates.jpg
+  text: |
+    It's a fruitful time of the year. Several group members completed their MPH studies and will soon begin their PhD/MD journeys. Ethan will join the University of Colorado as an MD student, and Uma will join UTHealth as a PhD student, having obtained the Outstanding New Student Scholarship. Edward, after completing a year of training as a researcher, will join the University of Pennsylvania as a PhD student. We wish them all the best in their future endeavors!
+
+- title: Drs. Nally and Hang attended NASA STM
+  date: April 2024
+  image: moments/2024-04-drs-nally-and-hang-attended.jpg
+  text: |
+    Group members attended the NASA TRACER-AQ STM and presented research on air pollution. In partnership with the Texas Commission on Environmental Quality, the DOE-led Tracking Aerosol Convection Interactions Experiment (TRACER) campaign, and several academic collaborators, NASA deployed assets to Houston, Texas, to measure air quality constituents at high spatial and temporal resolutions. More information can be found [HERE](https://www-air.larc.nasa.gov/missions/tracer-aq/).
+
+- title: Edward won NSF Graduate Research Fellowship
+  date: April 2024
+  image: moments/2024-04-edward-won-nsf-graduate-research.jpg
+  text: |
+    Under the mentorship of Dr. Hang, Edward won the National Science Foundation Graduate Research Fellowship for a five-year period. The funded project is about using AI to combine satellite and drone observations to improve wildfire prevention in the US. The photo captures the moment when Edward and Dr. Hang were discussing the fellowship proposal at a Thai restaurant. Congratulations!
+
+- title: 2023 American Geophysical Union Annual Meeting
+  date: December 2023
+  image: moments/2023-12-2023-american-geophysical-union-annual.png
+  text: |
+    We presented and contributed four studies at the meeting, covering topics such as air pollution, wildfires, and health. We hosted a session on environmental health and collaborated with NASA to facilitate a session on community health. Additionally, Dr. Hang was selected as the new Co-Chair of the AGU GeoHealth Early Career Committee.
+
+    AGU is a nonprofit organization that includes 130,000 people. More information about AGU GeoHealth can be found [HERE](https://connect.agu.org/geohealth/home).
+
+- title: New publication on health disparity
+  date: November 2023
+  image: moments/2023-11-new-publication-on-health-disparity.png
+  text: |
+    Previous studies have reported that particulate elemental carbon (EC) may have elevated toxicity. However, developing a ground monitoring network for EC is difficult. To face the challenge, we combined satellite remote sensing, machine learning techniques, and atmospheric big data to estimate long-term EC exposures in data-poor regions.
+
+    Read the open-access publication [HERE](https://iopscience.iop.org/article/10.1088/1748-9326/ad0862/meta).
+
+- title: The Rollins Magazine featured our work
+  date: October 2023
+  image: moments/2023-10-the-rollins-magazine-featured-our.png
+  text: |
+    Our work applying NASA satellite observations to promote community health was featured in the Rollins Magazine Cover Story, "Exposing the Exposome." Alongside world-class Rollins researchers, we employ exposure science to unravel how environmental factors influence our health and why these effects can vary widely among individuals and communities.
+
+    Picture credits to the Rollins Magazine. Read the Story [HERE](https://sph.emory.edu/features/2023/10/exposure-science-social-justice/).
+
+- title: Welcome new members
+  date: September 2023
+  image: moments/2023-09-welcome-new-members.jpg
+  text: |
+    Dr. Hang moved from Emory University to UTHealth. The photo on the left shows the first group photo. We welcome new members: Edward Zhang from the University of Pennsylvania with a background in computer science and economics; Yating Zeng from the University of Southern California with an MS in Biostatistics; and Dr. John Nally, a two-time US military veteran and clinician with extensive occupational medicine experience. Welcome to the group!
+
+- title: Ethan presented research at GCC
+  date: May 2023
+  image: moments/2023-05-ethan-presented-research-at-gcc.jpg
+  text: |
+    Ethan was selected to present his research on applying satellite remote sensing to advance community health at the 2023 Georgia Climate Conference (photo credit: Garry Harris). During his talk, he engaged in discussions with researchers, community stakeholders, and decision-makers. This was Ethan's first time attending an academic meeting. Well done!

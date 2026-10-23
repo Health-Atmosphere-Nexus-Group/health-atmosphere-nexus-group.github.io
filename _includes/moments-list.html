@@ -1,0 +1,17 @@
+{%- comment -%} Renders _data/moments.yml; every second entry puts the picture on the right. {%- endcomment -%}
+<div class="moments">
+{%- for m in site.data.moments %}
+{%- assign odd = forloop.index0 | modulo: 2 %}
+<article class="moment{% if odd == 1 %} flip{% endif %}">
+<div class="moment-media">
+{%- if m.youtube %}{% include youtube.html url=m.youtube title=m.title %}
+{%- elsif m.image %}<img src="images/{{ m.image }}" alt="{{ m.title | escape }}" loading="lazy">{% endif -%}
+</div>
+<div class="moment-text">
+<h3>{{ m.title }}</h3>
+<p class="moment-date">{{ m.date }}</p>
+{{ m.text | markdownify }}
+</div>
+</article>
+{%- endfor %}
+</div>

@@ -1,0 +1,6 @@
+{%- comment -%} Two-column grid of titled YouTube videos. Parameter: videos (list of title + youtube). {%- endcomment -%}
+<div class="video-grid">
+{%- for v in include.videos %}
+<div class="video-item"><h3>{{ v.title }}</h3>{% include youtube.html url=v.youtube title=v.title %}</div>
+{%- endfor %}
+</div>

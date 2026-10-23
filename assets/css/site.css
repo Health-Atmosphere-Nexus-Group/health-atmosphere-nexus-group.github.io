@@ -1,0 +1,209 @@
+/* HANG website. Desktop layout follows the original Wix site (980px content column);
+   below 1000px wide everything stacks into one column. */
+:root {
+  --accent: #C7542E;
+  --nav: #4A4C4E;
+  --serif: 'Crimson Pro', serif;      /* stands in for Wix's Adobe Caslon */
+  --sans: 'Nunito Sans', sans-serif;  /* stands in for Wix's Avenir Light */
+  --text-weight: 300;                 /* Nunito Sans 300 matches Avenir Light's darkness; 400 = darker text */
+  --head-lh: 1.48;                    /* Wix headings got Oswald's line box (1.48), taller than the font's own */
+}
+* { box-sizing: border-box; }
+html { background: #fff; }
+body { margin: 0; background: #fff; color: #000; font: var(--text-weight) 16px/1.4em var(--sans); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.wrap { position: relative; width: 980px; margin: 0 auto; }
+main { min-height: calc(100vh - 175px); }   /* keeps the footer at the bottom on short pages */
+.accent { color: var(--accent); }
+.gn { font-family: var(--serif); font-weight: 600; }
+.gn b { color: var(--accent); font-weight: inherit; }
+
+/* ---------- header ---------- */
+#hdr { position: relative; z-index: 10; height: 77px; background: #fff; box-shadow: 0 0 5px rgba(0,0,0,.7); }
+.hdr-in { height: 69px; }
+.logo { position: absolute; left: -72px; top: 14px; }
+.logo img { width: 138px; height: 49px; }
+.vline { position: absolute; left: 70px; top: 31px; width: 1px; height: 28px; background: rgba(66,66,66,.39); }
+.site-title { position: absolute; left: 83px; top: 28px; margin: 0; font-size: 20px; line-height: 22.4px; white-space: nowrap; }
+nav { position: absolute; right: -60px; top: 20px; height: 44px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; height: 100%; }
+nav a { display: flex; align-items: center; height: 100%; padding: 0 15px; font: var(--text-weight) 16px/1.4em var(--sans); color: var(--nav); transition: color .3s; }
+nav a:hover, nav a.active { color: var(--accent); }
+.burger { display: none; }
+
+/* ---------- footer ---------- */
+#ftr { position: relative; height: 98px; padding-top: 23px; text-align: center; background: rgba(255,255,255,.6); box-shadow: 0 0 5px rgba(0,0,0,.7); }
+#ftr p { margin: 0; }
+.tagline { font-size: 16px; line-height: 22.4px; }
+.copyright { margin-top: 8px !important; font-size: 11px; line-height: 22.4px; }
+
+/* ---------- page text (Markdown) ---------- */
+.prose { padding: 41px 0 30px; }
+.prose > p, .prose > ul, .prose > ol, .md > p, .md > ul, .md > ol {
+  margin: 0 0 23.8px; font-size: 17px; line-height: 1.4em; text-align: justify;
+}
+.prose > h2, .md > h2 { margin: 0 0 11.4px; font: 600 20px/var(--head-lh) var(--serif); letter-spacing: .01em; color: var(--accent); }
+.prose > h3, .md > h3 { margin: -3.4px 0 1.6px; font: 600 19px/var(--head-lh) var(--serif); letter-spacing: .01em; }
+.prose > * + h2 { margin-top: 39.5px; }
+.prose > h2:first-child { margin-top: -3.5px; }
+.prose > h2 + .publications { margin-top: 25px; }
+.prose > .small { font-size: 13px; }
+.page-capabilities > .small { font-size: 12px; }
+.page-opportunities > h3 { font-size: 18px; letter-spacing: normal; }
+.page-capabilities > * + h2 { margin-bottom: 1.4px; }
+.split { margin-bottom: 20px; }
+.prose > h3 + .split { margin-top: 22px; }
+.prose a:hover { text-decoration: underline; }
+.prose a.cap { display: inline-block; font-family: var(--serif); font-weight: 600; color: #333; }
+.prose a.cap::first-letter { color: var(--accent); }
+.prose sup { font-size: 9px; vertical-align: baseline; }
+.x-mark { font-size: 12px; }
+.prose > p.tight { margin-bottom: 11px; }
+.prose > ol.refs { margin-bottom: 13px; padding: 0; list-style-position: inside; font-size: 14px; line-height: 1.5em; text-align: left; }
+.prose > p.refs-title { margin: 0; font-size: 14px; line-height: 1.5em; }
+
+/* ---------- home ---------- */
+.banner { position: relative; height: 475px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #FAFAFA; }
+.banner-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.banner-title { position: relative; margin: 0 10px; font: 300 38px/normal 'Oswald', sans-serif; letter-spacing: .05em; color: #E6E7E8; text-align: center; }
+.page-home { padding: 62px 20px 61px; }
+.page-home > .ack { margin: 57px 0 0; }
+
+/* ---------- people ---------- */
+.page-people { padding-top: 47px; }
+.people { margin: 46px 0 0; }
+.person { position: relative; display: flex; gap: 29px; margin-bottom: 68px; }
+.person:last-child { margin-bottom: 52px; }
+.person-photo { flex: none; width: 262px; height: 262px; object-fit: cover; }
+.person-text { flex: 1; display: flex; flex-direction: column; min-height: 281.4px; margin-top: -9.4px; }
+.person-name { margin: 0 0 6.5px; font: 600 19px/var(--head-lh) var(--serif); letter-spacing: .01em; color: var(--accent); }
+.person-role { margin: 0 0 6.8px; font: 600 18px/var(--head-lh) var(--serif); letter-spacing: .01em; }
+.person-email { margin-left: 18px; font-style: italic; }
+.person-bio p { margin: 0 0 24.1px; font-size: 17px; line-height: 24.1px; text-align: justify; }
+.person-bio p:last-child { margin-bottom: 0; }
+/* icons sit at the photo's bottom-right corner, as on the original; site.js moves them below
+   the text (.in-flow) if a long bio would run into them */
+.person-links { position: absolute; right: 0; bottom: -9px; display: flex; gap: 5px; align-items: center; margin: 0; }
+.person-links.in-flow { position: static; align-self: flex-end; margin: auto 0 0; padding-top: 6px; }
+.person-links img { width: auto; }
+.page-people > h2 { margin-top: 0; }
+
+/* ---------- moments ---------- */
+.moments { padding: 6px 0 0; }
+.moment { display: flex; align-items: center; gap: 42px; margin-bottom: 62px; }
+.moment.flip { flex-direction: row-reverse; }
+.moment-media { flex: none; width: 470px; height: 255px; }
+.moment-media img { width: 100%; height: 100%; object-fit: cover; }
+.moment-media .video { height: 100%; }
+.moment-text { flex: 1; }
+.moment.flip .moment-text { text-align: right; }
+.moment-text h3 { margin: 0 0 6.6px; font: 600 20px/var(--head-lh) var(--serif); letter-spacing: .01em; color: var(--accent); }
+.moment-date { margin: 0 0 12.2px; font: 600 16px/var(--head-lh) var(--serif); letter-spacing: .01em; }
+.moment-text p:not(.moment-date) { margin: 0 0 22.4px; font-size: 16px; line-height: 1.4em; }
+.moment-text p:last-child { margin-bottom: 0; }
+
+/* ---------- capabilities picture grid ---------- */
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin: 0 0 9px; }
+.service { margin: 0; min-height: 236.5px; }
+.service img { width: 100%; height: 167px; object-fit: cover; }
+.service figcaption { padding: 10px 4px 0; text-align: center; font: var(--text-weight) 15px/1.4 var(--sans); color: #333; }
+
+/* ---------- research figures + lightbox ---------- */
+.figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 0 0 25px; }
+.figure img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.lightbox { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.85); cursor: zoom-out; }
+.lightbox img { max-width: 92vw; max-height: 92vh; }
+
+/* ---------- publications ---------- */
+.pubs { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.pub { display: flex; flex-direction: column; justify-content: center; height: 156px; padding: 12px 18px; text-align: center; background: #FBFBFB; color: #333; transition: background .3s; }
+.pub[hidden] { display: none; }
+a.pub:hover { background: #F1F1F1; text-decoration: none !important; }
+.pub-journal { font: 600 15px/1.35 var(--serif); color: var(--accent); }
+.pub-title { margin-top: 6px; font: var(--text-weight) 13px/1.4 var(--sans); }
+.pubs-more { display: block; margin: 14px auto 0; padding: 4px 18px; border: 0; background: none; font: var(--text-weight) 15px var(--sans); color: var(--nav); cursor: pointer; text-decoration: underline; }
+
+/* ---------- datasets ---------- */
+.datasets { margin-top: 8px; }
+.dataset { display: flex; gap: 29px; margin-bottom: 56px; }
+.dataset-image { flex: none; }
+.dataset-image img { width: 300px; height: 200px; object-fit: cover; }
+.dataset-text { flex: 1; min-width: 0; }
+.dataset-title { margin: -4px 0 2px; font: 600 20px/var(--head-lh) var(--serif); letter-spacing: .01em; color: var(--accent); }
+.dataset-meta { margin: 0; font: 600 16px/var(--head-lh) var(--serif); letter-spacing: .01em; }
+.dataset-authors { margin: 0 0 10px; font-size: 15px; color: #333; }
+.dataset-desc p { margin: 0 0 12px; font-size: 17px; line-height: 1.4em; text-align: justify; }
+.dataset-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; margin: 16px 0 0; font-size: 15px; }
+.dataset-links a { color: var(--nav); text-decoration: underline; }
+.prose .dataset-links a.dataset-button { padding: 5px 16px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; transition: background .2s, color .2s; }
+.prose .dataset-links a.dataset-button:hover { background: var(--accent); color: #fff; }
+.prose > .datasets-empty { color: #666; }
+
+/* ---------- videos ---------- */
+.video iframe { display: block; width: 100%; height: 100%; border: 0; background: #000; }
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 62px; row-gap: 24px; margin: 0 0 14px; }
+.video-grid h3 { margin: -3.2px 0 0.6px; font: 600 18px/var(--head-lh) var(--serif); letter-spacing: .01em; }
+.video-grid .video { aspect-ratio: 459 / 261; }
+
+/* ---------- two columns: text + video/picture (Teaching) ---------- */
+.split { display: flex; gap: 34px; align-items: flex-start; }
+.split > .md { flex: 0 0 491px; }
+.split > .video, .split > .split-media { flex: 1; margin-top: 25px; }
+.split > .video { aspect-ratio: 454 / 262; }
+
+/* ---------- small screens ---------- */
+/* the Wix-style header needs a window of ~1124px; narrower windows get a menu button */
+@media (max-width: 1123px) {
+  .hdr-in { width: auto; }
+  .logo { left: 16px; }
+  .vline { left: 160px; }
+  .site-title { left: 173px; }
+  .burger { display: block; position: absolute; right: 12px; top: 16px; width: 40px; height: 36px; border: 0; background: none; cursor: pointer; }
+  .burger span { display: block; height: 2px; margin: 6px; background: var(--nav); }
+  nav { display: none; position: absolute; top: 77px; left: 0; right: 0; height: auto; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,.15); }
+  nav ul { flex-direction: column; }
+  nav a { padding: 12px 20px; }
+  .nav-open nav { display: block; }
+}
+@media (max-width: 1000px) {
+  .wrap { width: auto; padding: 0 16px; }
+  #hdr, .hdr-in { height: 64px; }
+  .logo { left: 12px; top: 10px; }
+  .logo img { width: 110px; height: 39px; }
+  .vline, .site-title { display: none; }
+  .burger { top: 14px; }
+  nav { top: 64px; }
+
+  .prose { padding: 24px 16px 32px; }
+  .prose > p, .md > p { text-align: left; }
+  .banner { height: 300px; }
+  .banner-title { font-size: 28px; }
+  .page-home { padding: 32px 16px; }
+  .page-home > .ack { margin-top: 32px; }
+
+  .person { flex-direction: column; gap: 14px; margin-bottom: 44px; }
+  .person-photo { width: 220px; height: 220px; }
+  .person-text { min-height: 0; margin-top: 0; }
+  .person-bio p { text-align: left; }
+  .person-links, .person-links.in-flow { position: static; align-self: flex-start; margin-top: 10px; padding-top: 0; }
+
+  .moment, .moment.flip { flex-direction: column; align-items: stretch; gap: 14px; margin-bottom: 40px; }
+  .moment-media { width: 100%; height: auto; aspect-ratio: 470 / 255; }
+  .moment.flip .moment-text { text-align: left; }
+
+  .services { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .service { min-height: 0; }
+  .service img { height: auto; aspect-ratio: 4 / 3; }
+  .figures { gap: 10px; }
+  .pubs { grid-template-columns: 1fr; gap: 14px; }
+  .pub { height: auto; min-height: 120px; }
+  .video-grid { grid-template-columns: 1fr; }
+  .dataset { flex-direction: column; gap: 14px; margin-bottom: 40px; }
+  .dataset-image img { width: 100%; height: auto; aspect-ratio: 3 / 2; }
+  .dataset-desc p { text-align: left; }
+  .split { flex-direction: column; gap: 12px; }
+  .split > .md { flex: none; }
+  .split > .video, .split > .split-media { width: 100%; margin: 0 0 24px; }
+  #ftr { height: auto; padding-bottom: 20px; }
+}

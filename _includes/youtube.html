@@ -1,0 +1,8 @@
+{%- comment -%} YouTube embed. Parameters: url (any YouTube link), title. {%- endcomment -%}
+{%- assign yt_id = include.url | split: "v=" | last | split: "&" | first | split: "/" | last | split: "?" | first -%}
+{%- assign yt_start = "" -%}
+{%- if include.url contains "&t=" or include.url contains "?t=" -%}
+{%- assign yt_start = include.url | split: "t=" | last | split: "&" | first | remove: "s" -%}
+{%- endif -%}
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{{ yt_id }}{% if yt_start != "" %}?start={{ yt_start }}{% endif %}" title="{{ include.title | default: 'YouTube video' | escape }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{%- comment -%}{%- endcomment -%}

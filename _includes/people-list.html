@@ -1,0 +1,20 @@
+{%- comment -%} Renders one list from _data/people.yml. Parameter: group ("members" or "collaborators"). {%- endcomment -%}
+<div class="people">
+{%- for p in site.data.people[include.group] %}
+<article class="person">
+<img class="person-photo" src="images/{{ p.photo }}" alt="{{ p.name | escape }}" loading="lazy">
+<div class="person-text">
+<h3 class="person-name">{{ p.name }}</h3>
+<p class="person-role">{{ p.role }}{% if p.email %}<a class="person-email" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</p>
+<div class="person-bio">{{ p.bio | markdownify }}</div>
+{%- if p.uthealth or p.scholar or p.linkedin %}
+<p class="person-links">
+{%- if p.uthealth %}<a href="{{ p.uthealth }}" target="_blank" rel="noopener" title="UTHealth profile"><img src="images/logos/uthealth-icon.jpg" alt="UTHealth profile" width="90" height="16"></a>{% endif %}
+{%- if p.scholar %}<a href="{{ p.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><img src="images/logos/scholar-icon.webp" alt="Google Scholar" width="118" height="22"></a>{% endif %}
+{%- if p.linkedin %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><img src="images/logos/linkedin-icon.png" alt="LinkedIn" width="22" height="22"></a>{% endif -%}
+</p>
+{%- endif %}
+</div>
+</article>
+{%- endfor %}
+</div>

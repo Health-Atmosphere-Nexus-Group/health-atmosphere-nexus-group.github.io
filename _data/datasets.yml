@@ -1,0 +1,21 @@
+# Datasets page, newest first.
+#
+#   title:        dataset name (orange serif type, links to Zenodo)
+#   authors:      optional
+#   year:         optional
+#   license:      optional, e.g. CC BY 4.0
+#   description:  Markdown text
+#   zenodo:       link to the Zenodo record (required), e.g. https://zenodo.org/records/1234567
+#   doi:          optional, e.g. 10.5281/zenodo.1234567 (shown as a DOI link)
+#   paper:        optional link to the related publication
+#   image:        optional picture in images/ (e.g. a map preview); cropped to 300x200
+
+- title: "Data for: Geostationary Satellite Observation-Informed Modeling of Ozone Dynamics along the U.S.-Mexico Border"
+  authors: Aodong Mei, Zhengyi Cui, Yun Hang
+  year: 2026
+  license: CC BY 4.0
+  zenodo: https://zenodo.org/records/21317158
+  doi: 10.5281/zenodo.21317158
+  paper: https://doi.org/10.1021/acsestair.6c00108
+  description: |
+    Surface ozone modeling outputs for the Texas and Texas–Mexico border domain (107°W–93°W, 25°N–37°N), August 2023 to August 2024. Annual mean MDA8 ozone concentration (ppb), aggregated from 1-km grid cells to U.S. ZIP Code (ZCTA5) level. Supplement to the paper in *ACS ES&T Air*.

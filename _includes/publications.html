@@ -1,0 +1,16 @@
+{%- comment -%} Cards from _data/publications.yml: the first 12 are shown, "Show More" adds 4 at a time. {%- endcomment -%}
+<div class="publications">
+<div class="pubs">
+{%- for p in site.data.publications %}
+{%- capture body %}<span class="pub-journal">{% if p.year %}{{ p.year }} {% endif %}{{ p.journal }}</span><span class="pub-title">{{ p.title }}</span>{% endcapture %}
+{%- if p.link %}
+<a class="pub" href="{{ p.link }}" target="_blank" rel="noopener"{% if forloop.index > 12 %} hidden{% endif %}>{{ body }}</a>
+{%- else %}
+<div class="pub"{% if forloop.index > 12 %} hidden{% endif %}>{{ body }}</div>
+{%- endif %}
+{%- endfor %}
+</div>
+{%- if site.data.publications.size > 12 %}
+<button class="pubs-more" type="button">Show More</button>
+{%- endif %}
+</div>
