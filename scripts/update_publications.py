@@ -121,9 +121,10 @@ def main():
     lines = [f'The weekly check found **{len(found)} new publication{"s" if len(found) > 1 else ""}** on '
              f'[OpenAlex](https://openalex.org/authors/{author}) that {"are" if len(found) > 1 else "is"} not on the website yet:', '']
     lines += [f"- {p['year']}, *{p['journal']}*: [{p['title']}]({p['link']})" for p in found]
-    lines += ['', '**Merge** this pull request to add them to the top of "Recent Publications" on the Research page.',
-              '', 'If a paper is not ours or should not be listed, add its DOI to `_data/publications_exclude.yml` '
-              'and close this pull request; the next weekly check will suggest the others again.']
+    lines += ['', 'To publish them, open the link above, click **Create pull request**, then **Merge pull request**. '
+              'They appear at the top of "Recent Publications" on the Research page, and this issue closes itself.',
+              '', 'If a paper is not ours or should not be listed, add its DOI to `_data/publications_exclude.yml`; '
+              'the next weekly check will update this list without it.']
     SUMMARY.write_text('\n'.join(lines) + '\n')
     print('\n'.join(lines))
 

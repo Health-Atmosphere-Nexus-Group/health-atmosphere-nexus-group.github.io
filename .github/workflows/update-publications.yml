@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  issues: write
 
 concurrency: new-publications
 
@@ -20,10 +20,10 @@ jobs:
       - name: Look for new papers on OpenAlex
         run: python3 scripts/update_publications.py
 
-      - name: Open or update the pull request
+      - name: Put the suggestions on a branch and open an issue
         env:
           GH_TOKEN: ${{ github.token }}
-          REVIEWERS: cyyyyy111   # GitHub accounts asked to review, comma-separated
+          ASSIGNEES: cyyyyy111,hangyun0511   # GitHub accounts notified by email, comma-separated
         run: |
           if git diff --quiet -- _data/publications.yml; then
             echo "Nothing new this week."
@@ -34,9 +34,13 @@ jobs:
           git switch -C new-publications
           git commit -m "Add new publications found on OpenAlex" -- _data/publications.yml
           git push --force origin new-publications
-          if [ "$(gh pr view new-publications --json state --jq .state 2>/dev/null)" = "OPEN" ]; then
-            gh pr edit new-publications --body-file new-publications.md
-          else
-            gh pr create --base main --head new-publications --title "New publications found on OpenAlex" \
-              --body-file new-publications.md --reviewer "$REVIEWERS"
+
+          gh label create new-publications --color C7542E --description "Weekly OpenAlex check" 2>/dev/null || true
+          number=$(gh issue list --state open --label new-publications --json number --jq '.[0].number // empty')
+          if [ -z "$number" ]; then
+            number=$(gh issue create --title "New publications found on OpenAlex" --label new-publications \
+              --assignee "$ASSIGNEES" --body "Checking..." | grep -o '[0-9]*$')
           fi
+          link="https://github.com/${GITHUB_REPOSITORY}/compare/main...new-publications?expand=1&title=Add+new+publications&body=Closes+%23${number}"
+          { echo "### [Review and publish them]($link)"; echo; cat new-publications.md; } > issue.md
+          gh issue edit "$number" --body-file issue.md
