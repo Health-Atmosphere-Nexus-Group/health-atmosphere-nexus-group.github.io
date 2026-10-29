@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Weekly check for new publications on OpenAlex (run by .github/workflows/update-publications.yml).
+"""Weekly publication update from OpenAlex (run by .github/workflows/update-publications.yml).
 
-Adds papers that are on OpenAlex but not yet in _data/publications.yml to the top of that file,
-and writes a summary to new-publications.md for the pull request. Only journal articles and
-reviews published on or after `openalex.since` (in _config.yml) are considered; papers listed
-in _data/publications_exclude.yml are skipped. Uses the Python standard library only.
+Adds journal papers co-authored by the group leader that are on OpenAlex but not yet in
+_data/publications.yml (newest first, at the top of the file). Settings are under `openalex:`
+in _config.yml. A paper is added only if it is verified as hers: on the paper she is listed with
+one of the configured institutions, or the publisher's record (Crossref) carries her ORCID.
+Every added paper is remembered in _data/publications_added.yml, so a paper deleted from the
+website is not added again; _data/publications_exclude.yml blocks papers before they are added.
+Uses the Python standard library only.
 """
 import difflib
 import html
@@ -17,13 +20,14 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONFIG = ROOT / '_config.yml'
 PUBS = ROOT / '_data' / 'publications.yml'
+ADDED = ROOT / '_data' / 'publications_added.yml'
 EXCLUDE = ROOT / '_data' / 'publications_exclude.yml'
-SUMMARY = ROOT / 'new-publications.md'
 
 
 def setting(name):
     block = re.search(r'^openalex:[^\n]*\n((?:[ \t]+[^\n]*\n?)+)', CONFIG.read_text(), re.M)
-    return re.search(rf'^\s+{name}:\s*([^\s#]+)', block.group(1), re.M).group(1).strip('"\'')
+    value = re.search(rf'^\s+{name}:\s*(.*?)\s*(?:#.*)?$', block.group(1), re.M).group(1)
+    return value.strip('"\'')
 
 
 def unquote(value):
@@ -62,35 +66,60 @@ def listed_values(path, key=None):
     return [unquote(v) for v in re.findall(pattern, path.read_text(), re.M)]
 
 
+def get_json(url):
+    request = urllib.request.Request(url, headers={'User-Agent': 'HANG website publication update'})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return json.load(response)
+
+
 def openalex_works(author, since):
     params = {
         'filter': f'author.id:{author},from_publication_date:{since},type:article|review',
         'sort': 'publication_date:desc',
         'per_page': '100',
-        'select': 'id,doi,title,publication_year,publication_date,primary_location,is_paratext,is_retracted',
+        'select': 'id,doi,title,publication_year,publication_date,primary_location,authorships,is_paratext,is_retracted',
     }
-    request = urllib.request.Request('https://api.openalex.org/works?' + urllib.parse.urlencode(params),
-                                     headers={'User-Agent': 'HANG website publication check'})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return json.load(response)['results']
+    return get_json('https://api.openalex.org/works?' + urllib.parse.urlencode(params))['results']
+
+
+def listed_with_institution(work, author, institutions):
+    """On this paper, the author's affiliation names one of the given institutions."""
+    for a in work.get('authorships') or []:
+        if (a.get('author') or {}).get('id', '').rsplit('/', 1)[-1] == author:
+            names = [i.get('display_name') or '' for i in a.get('institutions') or []] + (a.get('raw_affiliation_strings') or [])
+            return any(inst.lower() in name.lower() for name in names for inst in institutions)
+    return False
+
+
+def orcid_on_paper(doi, orcid):
+    """The publisher's record of the paper (Crossref) lists this ORCID among its authors."""
+    if not doi:
+        return False
+    try:
+        authors = get_json('https://api.crossref.org/works/' + urllib.parse.quote(doi))['message'].get('author', [])
+    except Exception:
+        return False
+    return any((a.get('ORCID') or '').rstrip('/').endswith(orcid) for a in authors)
 
 
 def main():
-    author, since = setting('author_id'), setting('since')
+    author, orcid, since = setting('author_id'), setting('orcid'), setting('since')
+    institutions = [s.strip() for s in setting('institutions').split(';') if s.strip()]
+
     known_titles = {norm(t) for t in listed_values(PUBS, 'title')}
     known_dois = {d for d in map(doi_of, listed_values(PUBS, 'link')) if d}
-    skip = listed_values(EXCLUDE)
-    skip_titles, skip_dois = {norm(v) for v in skip}, {d for d in map(doi_of, skip) if d}
+    blocked = listed_values(EXCLUDE) + listed_values(ADDED)  # excluded, or added before (maybe removed since)
+    blocked_titles, blocked_dois = {norm(v) for v in blocked}, {d for d in map(doi_of, blocked) if d}
 
-    def already_listed(title, doi):
-        if doi and (doi in known_dois or doi in skip_dois):
+    def already_known(title, doi):
+        if doi and (doi in known_dois or doi in blocked_dois):
             return True
-        if title in known_titles or title in skip_titles:
+        if title in known_titles or title in blocked_titles:
             return True
         # same paper with small differences in punctuation or capitalisation
         return any(difflib.SequenceMatcher(None, title, t).ratio() >= 0.93 for t in known_titles)
 
-    found, seen = [], set()
+    found, unverified, seen = [], [], set()
     for work in openalex_works(author, since):
         location = work.get('primary_location') or {}
         source = location.get('source') or {}
@@ -99,13 +128,19 @@ def main():
             continue
         title = clean(work.get('title'))
         doi = doi_of(work.get('doi'))
-        if not title or norm(title) in seen or already_listed(norm(title), doi):
+        if not title or norm(title) in seen or already_known(norm(title), doi):
             continue
         seen.add(norm(title))
-        found.append({'year': work.get('publication_year'), 'journal': clean(source.get('display_name')),
-                      'title': title, 'link': f'https://doi.org/{doi}' if doi else location.get('landing_page_url') or work['id'],
-                      'date': work.get('publication_date') or ''})
+        paper = {'year': work.get('publication_year'), 'journal': clean(source.get('display_name')), 'title': title,
+                 'link': f'https://doi.org/{doi}' if doi else location.get('landing_page_url') or work['id'],
+                 'date': work.get('publication_date') or '', 'key': doi or title}
+        if listed_with_institution(work, author, institutions) or orcid_on_paper(doi, orcid):
+            found.append(paper)
+        else:
+            unverified.append(paper)
 
+    for p in unverified:
+        print(f"Not added (affiliation and ORCID could not be verified): {p['year']}, {p['journal']}: {p['title']} {p['link']}")
     if not found:
         print('No new publications.')
         return
@@ -118,15 +153,12 @@ def main():
     text = (text[:first.start()] + entries + '\n\n' + text[first.start():]) if first else text.rstrip('\n') + '\n\n' + entries + '\n'
     PUBS.write_text(text)
 
-    lines = [f'The weekly check found **{len(found)} new publication{"s" if len(found) > 1 else ""}** on '
-             f'[OpenAlex](https://openalex.org/authors/{author}) that {"are" if len(found) > 1 else "is"} not on the website yet:', '']
-    lines += [f"- {p['year']}, *{p['journal']}*: [{p['title']}]({p['link']})" for p in found]
-    lines += ['', 'To publish them, open the link above, click **Create pull request**, then **Merge pull request**. '
-              'They appear at the top of "Recent Publications" on the Research page, and this issue closes itself.',
-              '', 'If a paper is not ours or should not be listed, add its DOI to `_data/publications_exclude.yml`; '
-              'the next weekly check will update this list without it.']
-    SUMMARY.write_text('\n'.join(lines) + '\n')
-    print('\n'.join(lines))
+    added = ADDED.read_text().rstrip('\n') + '\n' if ADDED.exists() else ''
+    ADDED.write_text(added + ''.join(f"- {quote(p['key'])}\n" for p in found))
+
+    print(f'Added {len(found)} publication(s):')
+    for p in found:
+        print(f"  {p['year']}, {p['journal']}: {p['title']} {p['link']}")
 
 
 if __name__ == '__main__':

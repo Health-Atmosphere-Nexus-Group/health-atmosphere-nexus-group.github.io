@@ -14,10 +14,12 @@ kramdown:
   hard_wrap: false
   smart_quotes: apos,apos,quot,quot   # keep quotes exactly as typed
 
-# Weekly publication check (scripts/update_publications.py, run every Monday by GitHub Actions)
+# Weekly publication update (scripts/update_publications.py, run every Monday by GitHub Actions)
 openalex:
-  author_id: A5027110619   # Yun Hang on OpenAlex (ORCID 0000-0002-3240-2149)
-  since: 2026-01-01        # only papers published on or after this date are suggested
+  author_id: A5027110619   # Yun Hang on OpenAlex
+  orcid: 0000-0002-3240-2149
+  institutions: University of Texas Health Science Center; UTHealth   # her affiliation on a paper must name one of these (separate with ;)
+  since: 2026-01-01        # only papers published on or after this date are added
 
 defaults:
   - scope:
@@ -28,7 +30,6 @@ defaults:
 exclude:
   - README.md
   - scripts
-  - new-publications.md
   - Gemfile
   - Gemfile.lock
   - vendor

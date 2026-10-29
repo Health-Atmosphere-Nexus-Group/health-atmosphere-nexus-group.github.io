@@ -94,26 +94,23 @@ To hide the Datasets page from the menu, delete its two lines in `_data/navigati
 ## Automatic publication updates
 
 Every Monday, GitHub checks [OpenAlex](https://openalex.org) (a free scholarly database covering the same papers as
-Google Scholar) for new papers co-authored by Yun Hang that are not on the website yet. If it finds any, it opens an issue
-("New publications found on OpenAlex") listing them and emails the people in `ASSIGNEES`:
+Google Scholar) for journal papers co-authored by Yun Hang that are not on the website yet, and adds them to the top of
+`_data/publications.yml`; the website updates a few minutes later. Any co-author position counts, so students'
+first-author papers with her as a co-author are included.
 
-- Open the link at the top of the issue, click **Create pull request**, then **Merge pull request**. The papers appear
-  at the top of "Recent Publications" and the issue closes itself.
-- If a paper is not ours or should not be listed, add its DOI to `_data/publications_exclude.yml`; the next check
-  updates the issue without it.
+- **Only verified papers are added:** on the paper, her affiliation must name one of the `institutions` in
+  `_config.yml`, or the publisher's record (Crossref) must list her ORCID. Papers that fail both checks are not
+  added; they are listed in the run log (Actions tab) and can be added by hand.
+- **To take a paper down,** delete its four lines in `_data/publications.yml`. The update remembers every paper it
+  added (`_data/publications_added.yml`) and never adds it again.
+- **To block a paper before it appears,** add its DOI to `_data/publications_exclude.yml`.
+- **To run the update right away:** Actions → Update publications → Run workflow.
 
-To run the check right away: **Actions → Check for new publications → Run workflow**. Papers can still be added by hand
-as described above.
+Settings (`openalex` in `_config.yml`): OpenAlex author ID, ORCID, accepted institutions, and the date from which
+papers are added. Preprints, datasets and conference abstracts are always skipped.
 
-Settings:
-- `openalex` in `_config.yml`: the OpenAlex author ID and the date from which papers are suggested.
-- `ASSIGNEES` in `.github/workflows/update-publications.yml`: who gets the email (GitHub user names, comma-separated;
-  currently cyyyyy111 and hangyun0511). GitHub sends it to the email address each account uses for notifications
-  (GitHub Settings → Notifications; "Custom routing" can send this organization's mail to a work address).
-- Only journal articles and reviews are suggested; preprints, datasets and conference abstracts are skipped.
-
-In public repositories GitHub pauses scheduled checks after 60 days without any commits (it emails a warning first);
-switch the check back on in the Actions tab. This does not apply to private repositories.
+In public repositories GitHub pauses scheduled runs after 60 days without any commits (it emails a warning first);
+switch the update back on in the Actions tab. This does not apply to private repositories.
 
 ## Text formatting (Markdown)
 

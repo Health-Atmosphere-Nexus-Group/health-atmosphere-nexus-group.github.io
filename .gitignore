@@ -6,4 +6,3 @@ _site/
 vendor/
 Gemfile.lock
 .DS_Store
-new-publications.md
