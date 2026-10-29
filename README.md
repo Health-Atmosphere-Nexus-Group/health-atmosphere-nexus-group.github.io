@@ -91,6 +91,27 @@ The first 12 cards are shown; **Show More** reveals the rest.
 Only `title`, `zenodo` and `description` are needed; the rest is optional (`image:` adds a preview picture).
 To hide the Datasets page from the menu, delete its two lines in `_data/navigation.yml`.
 
+## Automatic publication updates
+
+Every Monday, GitHub checks [OpenAlex](https://openalex.org) (a free scholarly database covering the same papers as
+Google Scholar) for new papers by Yun Hang that are not on the website yet. If it finds any, it opens a pull request
+listing them and emails a review request:
+
+- **Merge** the pull request to publish them; they appear at the top of "Recent Publications".
+- If a paper is not ours or should not be listed, add its DOI to `_data/publications_exclude.yml` and close the
+  pull request; the next check suggests the others again.
+
+To run the check right away: **Actions → Check for new publications → Run workflow**. Papers can still be added by hand
+as described above.
+
+Settings:
+- `openalex` in `_config.yml`: the OpenAlex author ID and the date from which papers are suggested.
+- `REVIEWERS` in `.github/workflows/update-publications.yml`: who is asked to review (GitHub user names, comma-separated).
+- Only journal articles and reviews are suggested; preprints, datasets and conference abstracts are skipped.
+
+In public repositories GitHub pauses scheduled checks after 60 days without any commits (it emails a warning first);
+switch the check back on in the Actions tab. This does not apply to private repositories.
+
 ## Text formatting (Markdown)
 
 - A blank line starts a new paragraph; `<br>` breaks a line inside a paragraph.

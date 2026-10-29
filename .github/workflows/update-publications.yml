@@ -1,0 +1,42 @@
+name: Check for new publications
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"   # Mondays 14:00 UTC (8-9 am in Houston)
+  workflow_dispatch:        # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: new-publications
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Look for new papers on OpenAlex
+        run: python3 scripts/update_publications.py
+
+      - name: Open or update the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEWERS: cyyyyy111   # GitHub accounts asked to review, comma-separated
+        run: |
+          if git diff --quiet -- _data/publications.yml; then
+            echo "Nothing new this week."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C new-publications
+          git commit -m "Add new publications found on OpenAlex" -- _data/publications.yml
+          git push --force origin new-publications
+          if [ "$(gh pr view new-publications --json state --jq .state 2>/dev/null)" = "OPEN" ]; then
+            gh pr edit new-publications --body-file new-publications.md
+          else
+            gh pr create --base main --head new-publications --title "New publications found on OpenAlex" \
+              --body-file new-publications.md --reviewer "$REVIEWERS"
+          fi
