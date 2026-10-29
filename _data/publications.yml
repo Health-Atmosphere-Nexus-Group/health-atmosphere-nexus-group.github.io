@@ -6,6 +6,46 @@
 #   link:           URL the card opens
 
 - year: 2026
+  journal: Journal of Public Health in Africa
+  title: "Extreme weather events and mental health impacts in West Africa: A systematic review of evidence gaps"
+  link: https://doi.org/10.4102/jphia.v17i1.1760
+
+- year: 2026
+  journal: GeoHealth
+  title: "Calling for a GeoHealth Decadal Survey: Accelerating Solution‐Oriented Research and Applications to Address Environmental and Health Problems"
+  link: https://doi.org/10.1029/2026gh002024
+
+- year: 2026
+  journal: Environmental Pollution
+  title: "Daily 1 km satellite-based PM2.5 exposure estimates in Bangladesh, 2020–2025: spatiotemporal patterns and implications for environmental health"
+  link: https://doi.org/10.1016/j.envpol.2026.129051
+
+- year: 2026
+  journal: Journal of the Air & Waste Management Association
+  title: Satellite-derived air quality data can effectively support health needs when use cases, Earth observing capabilities, and capacities align
+  link: https://doi.org/10.1080/10962247.2026.2698602
+
+- year: 2026
+  journal: ACS ES&T Air
+  title: Geostationary Satellite Observation-Informed Modeling of Ozone Dynamics along the U.S.–Mexico Border
+  link: https://doi.org/10.1021/acsestair.6c00108
+
+- year: 2026
+  journal: Journal of the American College of Cardiology
+  title: Long-Term Exposure to PM2.5 Constituents and Coronary Heart Disease Risk in China
+  link: https://doi.org/10.1016/j.jacc.2026.05.030
+
+- year: 2026
+  journal: Environmental Science & Technology
+  title: A Spatiotemporal Decomposition Framework for Temporal Persistence and Regional Transport in PM2.5 Variability
+  link: https://doi.org/10.1021/acs.est.6c03043
+
+- year: 2026
+  journal: Habitable Planet
+  title: "Climate Change, Environmental Degradation, and Human Health: A Converging Crisis"
+  link: https://doi.org/10.63335/j.hp.2026.0029
+
+- year: 2026
   journal: International Journal of Disaster Risk Reduction
   title: Revealing time-sensitive latent public health and emotional distress topics in Reddit discourse during the 2025 Southern California wildfires
   link: https://www.sciencedirect.com/science/article/pii/S2212420926001792
