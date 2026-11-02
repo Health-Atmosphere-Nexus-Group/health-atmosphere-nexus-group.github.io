@@ -6,6 +6,11 @@
 #   link:           URL the card opens
 
 - year: 2026
+  journal: The Lancet
+  title: "The 2026 report of the Lancet Countdown on health and climate change: a decade of escalating health harms and a decisive moment for all"
+  link: https://doi.org/10.1016/s0140-6736(26)01779-4
+
+- year: 2026
   journal: Journal of Public Health in Africa
   title: "Extreme weather events and mental health impacts in West Africa: A systematic review of evidence gaps"
   link: https://doi.org/10.4102/jphia.v17i1.1760
