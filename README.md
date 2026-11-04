@@ -36,7 +36,7 @@ Keep photos reasonably small (under ~500 KB); any size works, they are cropped a
 
 In the YAML files, indentation matters: copy an existing entry and keep the same spaces.
 
-**Add a person** – in `_data/people.yml`, under `members:` (or `collaborators:`), in the position where they should appear:
+**Add a person** – in `_data/people.yml`, under `members:`, in the position where they should appear:
 
 ```yaml
   - name: Jane Doe, MPH

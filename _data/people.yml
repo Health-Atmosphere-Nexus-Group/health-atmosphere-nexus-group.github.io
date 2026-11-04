@@ -21,25 +21,32 @@ members:
   - name: John Nally, MD, MPH, MBA
     role: Occupational and Environmental Medicine Resident (2023-25), Team Clinician (2025-)
     photo: people/john-nally.jpg
-    linkedin: https://www.linkedin.com/in/john-nally-md-mph-b059ab3a/
+    linkedin: https://www.linkedin.com/in/john-nally-md-mph-mba-facoem-b059ab3a/
     bio: |
       Dr. Nally is a two-time U.S. military veteran and retired FAA air traffic controller, where he spent 26 years ensuring aviation safety. He later pursued medicine, earning his MD from the Renaissance School of Medicine at Stony Brook University and completing an internship in Internal Medicine with the U.S. Air Force at the San Antonio Military Medical Center. Building on his clinical and occupational medicine experience, he earned an MPH and completed 2-year residency in Occupational and Environmental Medicine at UTHealth. He now serves as group’s clinical expert with a continuing interest in space technology and the health impacts of air pollution and extreme weather.
 
+  - name: Komalpreet Singh, PhD, MS
+    role: Postdoctoral Research Fellow (2026-)
+    photo: people/komalpreet-singh.jpg
+    linkedin: https://www.linkedin.com/in/komalpreet--singh/
+    bio: |
+      Dr. Singh is a researcher and engineer specializing in geospatial artificial intelligence, spatiotemporal modeling, remote sensing, and environmental epidemiology. He earned his Ph.D. in Environmental Health Engineering from the University of Florida. His research integrates satellite observations, geospatial data science, and predictive modeling to address environmental and public health challenges. His work includes developing an automated real-time cholera risk assessment system, satellite-based methods for global monitoring of Vibrio spp., and automated cloud-detection algorithms for geostationary satellite platforms. His professional experience also includes roles as a Remote Sensing Scientist and an NSF Intern with the Florida Department of Environmental Protection.
+
+  - name: Uma Mary Govindswamy, MPH
+    role: PhD Student (2024-), MPH Student (2024), Communications & Partnerships Lead
+    photo: people/uma-mary-govindswamy.jpg
+    linkedin: https://www.linkedin.com/in/umgovindswamy/
+    bio: |
+      Uma is a PhD student in EOHS. She joined HANG during her MPH in Global Environmental Health at Emory University's Rollins School of Public Health. She holds dual degrees (BS/BA) in Biology & Global Health from Duke University. She brings a strong technical background in international development, cross-sector collaboration, and climate-health research and implementation. Her research uses spatial and statistical methods to examine how environmental stressors shape vulnerability and resilience, particularly regarding mental and social health. She founded the HANG Summer Internship Program to introduce talented high school students to careers in environmental health.
+
   - name: Zhengyi Cui, MPH
-    role: PhD Student (2024-)
+    role: PhD Student (2024-), Data Science & AI Lead
     photo: people/zhengyi-cui.jpg
     linkedin: https://www.linkedin.com/in/zhengyi-cui-25727a296/
     bio: |
       Zhengyi is a PhD student in the Department of Environmental and Occupational Health Sciences (EOHS) at UTHealth. Prior to his PhD journey, he earned an MPH in Epidemiology at New York University. His research interests lie in infectious diseases and the application of machine learning and deep learning in exposure modeling and epidemiological studies.
 
       Fun Facts: Zhengyi was a professional poker player from 2020 to 2022 and participated in the World Series of Poker main event in 2022. His favorite pastime is playing Yu-Gi-Oh!
-
-  - name: Uma Mary Govindswamy, MPH
-    role: PhD Student (2024-), MPH Student (2024)
-    photo: people/uma-mary-govindswamy.jpg
-    linkedin: https://www.linkedin.com/in/umgovindswamy/
-    bio: |
-      Uma is a PhD student in EOHS. She joined HANG during her MPH in Global Environmental Health at Emory University's Rollins School of Public Health. She holds dual degrees (BS/BA) in Biology & Global Health from Duke University. She brings a strong technical background in international development, cross-sector collaboration, and climate-health research and implementation. Her research uses spatial and statistical methods to examine how environmental stressors shape vulnerability and resilience, particularly regarding mental and social health. She founded the HANG Summer Internship Program to introduce talented high school students to careers in environmental health.
 
   - name: Aodong Mei, MPA
     role: PhD Student (2024-)
@@ -59,22 +66,6 @@ members:
 
       Fun Facts: J’Lynn used to raise livestock such as pigs and hopes to have a farm and animals again one day.
 
-  - name: Yue Zhang, MS
-    role: MS Student (2024-)
-    photo: people/yue-zhang.jpg
-    linkedin: https://www.linkedin.com/in/yue-zhang-34228924b/
-    bio: |
-      Yue is an MS student in the Department of Biostatistics and Data Science at UTHealth. She holds an MS in City and Regional Planning from the University of North Carolina at Chapel Hill. Her research employs spatial and statistical methods to analyze the associations among air pollution, extreme heat, and green canopy coverage, as well as their implications for community and urban health.
-
-      Fun Facts: The name of Yue’s cat is “MiZi” which means cat.
-
-  - name: Kathryn Phung
-    role: MPH Student (2024-)
-    photo: people/kathryn-phung.jpg
-    linkedin: https://www.linkedin.com/in/kathryn-phung/
-    bio: |
-      Kathryn is an MPH student in Environmental and Occupational Health Sciences at UTHealth School of Public Health. She earned her BS in Chemistry with a concentration in Organic Chemistry from Rice University. Her current research focuses on how chemical components released from wildfires influence cancer risk, integrating her background in analytical chemistry with pressing questions in environmental health. At UTHealth, she aims to continue her work at the science–policy interface and apply her analytical skills to advancing actionable environmental health initiatives.
-
   - name: Charlotte Stokes
     role: Undergraduate Student (2026-)
     photo: people/charlotte-stokes.jpg
@@ -87,6 +78,29 @@ members:
     photo: people/sophia-cheng.jpg
     bio: |
       Sophia is an undergraduate research assistant at HANG and a student studying Biosciences and Medical Humanities at Rice University. She has a background in activism and sustainability work. In high school, she co-founded several environmental initiatives, including a school food waste reduction program and an activism club. She also conducted research with the Energy & Geoscience Institute at the The University of Utah, where she contributed to a literature review on the social implications of carbon sequestration. Her primary research interests focus on the intersections of environmental change and modern health issues, particularly environmental health and population health outcomes.
+
+  - name: Destiny Sumani
+    role: Undergraduate Student (2026-)
+    photo: people/destiny-sumani.jpg
+    linkedin: https://www.linkedin.com/in/destiny-sumani-b6928327a/
+    bio: |
+      Destiny is a freshman at Duke University studying Biology and Global Health on the pre-med track. She has conducted neuroscience research at UTHealth McGovern Medical School on neuroinflammation, ischemic stroke, and stroke disparities, with publications in Translational Stroke Research and Aging and Disease. Outside the lab, she co-founded a menstrual equity nonprofit that has distributed over 125,000 hygiene products, contributed to a reproductive health app with over 180,000 downloads, and helped advance statewide civic education legislation in Texas. At HANG, she is interested in how environmental factors and heat exposure influence maternal and community health.
+
+  - name: Yue Zhang, MS
+    role: MS Student (2024-26)
+    photo: people/yue-zhang.jpg
+    linkedin: https://www.linkedin.com/in/yue-zhang-34228924b/
+    bio: |
+      Yue is an MS student in the Department of Biostatistics and Data Science at UTHealth. She holds an MS in City and Regional Planning from the University of North Carolina at Chapel Hill. Her research employs spatial and statistical methods to analyze the associations among air pollution, extreme heat, and green canopy coverage, as well as their implications for community and urban health.
+
+      Fun Facts: The name of Yue’s cat is “MiZi” which means cat.
+
+  - name: Kathryn Phung
+    role: MPH Student (2024-26)
+    photo: people/kathryn-phung.jpg
+    linkedin: https://www.linkedin.com/in/kathryn-phung/
+    bio: |
+      Kathryn is an MPH student in Environmental and Occupational Health Sciences at UTHealth School of Public Health. She earned her BS in Chemistry with a concentration in Organic Chemistry from Rice University. Her current research focuses on how chemical components released from wildfires influence cancer risk, integrating her background in analytical chemistry with pressing questions in environmental health. At UTHealth, she aims to continue her work at the science–policy interface and apply her analytical skills to advancing actionable environmental health initiatives.
 
   - name: Yating Zeng, MS
     role: PhD Student (2023-26)
@@ -119,12 +133,12 @@ members:
 
       Fun Facts: Dr. Zhou is a dancer who has performed in over 100 national & international events, including the air pollution-themed show *Smog*. He received the Olympic Advanced Individual Prize in recognition of his outstanding contributions to culture.
 
-  - name: Ethan Li, MPH
-    role: MPH Student (2023-24)
-    photo: people/ethan-li.jpg
-    linkedin: https://www.linkedin.com/in/ethan-li-43203719a/
+  - name: Huanchun Huang, PhD, MS
+    role: Research Associate (2024)
+    photo: people/huanchun-huang.jpg
+    linkedin: https://www.linkedin.com/in/huanchun-huang-132a50290/
     bio: |
-      Ethan was a graduate research assistant with HANG during his MPH in Environmental Health and Epidemiology at the Rollins School of Public Health of Emory University. Prior to his MPH, he earned a BS in Genetics and Genomics from the University of California, Davis. His research examines the relationships between air pollution, extreme weather exposures, and population health outcomes. He leverages satellite remote sensing to analyze these complex interactions and empower communities with actionable insights. After completing his MPH, Ethan became an MD candidate at the University of Colorado. In the future, he hopes to become a practicing physician.
+      Dr. Huang holds a PhD in Urban Planning from Tianjin University and completed his postdoctoral training at Nanjing University. He was an Associate Professor at Nanjing Forestry University and a visiting scholar at the University of Florida and the University of Texas at San Antonio. His research focuses on the health risks of extreme heat and the benefits of green space, emphasizing urban ecological planning, therapeutic landscape design, and urban simulation. He has successfully obtained extramural funding for projects on optimizing urban green spaces to mitigate the urban heat island effect and AI-based urban heat island predictions.
 
   - name: Edward Zhang
     role: Research Intern (2023-24)
@@ -133,28 +147,9 @@ members:
     bio: |
       Edward was a researcher at HANG and is now a PhD student co-mentored at the University of Pennsylvania with support from an NSF fellowship. He holds a BSE in Visual Computing from the School of Engineering and Applied Science and a BS in Economics with a concentration in Entrepreneurship from the Wharton Business School. His research interests lie in the practical applications of technologies at the intersection of computer graphics and vision. Specifically, he is employing machine learning approaches to integrate satellite images and drone observations for predicting wildfires in the US.
 
-  - name: Huanchun Huang, PhD, MS
-    role: Research Associate (2024)
-    photo: people/huanchun-huang.jpg
-    linkedin: https://www.linkedin.com/in/huanchun-huang-132a50290/
+  - name: Ethan Li, MPH
+    role: MPH Student (2023-24)
+    photo: people/ethan-li.jpg
+    linkedin: https://www.linkedin.com/in/ethan-li-43203719a/
     bio: |
-      Dr. Huang holds a PhD in Urban Planning from Tianjin University and completed his postdoctoral training at Nanjing University. He was an Associate Professor at Nanjing Forestry University and a visiting scholar at the University of Florida and the University of Texas at San Antonio. His research focuses on the health risks of extreme heat and the benefits of green space, emphasizing urban ecological planning, therapeutic landscape design, and urban simulation. He has successfully obtained extramural funding for projects on optimizing urban green spaces to mitigate the urban heat island effect and AI-based urban heat island predictions.
-
-collaborators:
-  - name: Cici Bauer, PhD, MS
-    role: Associate Professor
-    photo: people/cici-bauer.jpg
-    uthealth: https://sph.uth.edu/faculty/?fac=d8BSUv4jdG1rELwdwMYohg==
-    scholar: https://scholar.google.com/citations?hl=en&user=Tczg8ZoAAAAJ&view_op=list_works&sortby=pubdate
-    linkedin: https://www.linkedin.com/in/cici-bauer-18b16629/
-    bio: |
-      Dr. Bauer is a tenured faculty member at UTHealth and holds the James W. Rockwell Professorship in Public Health. She earned her PhD in Statistics from the University of Washington, Seattle with a research focus on spatial and spatiotemporal data science. Currently, she directs the [Center for Spatial-Temporal Modeling for Applications in Population Sciences](https://sph.uth.edu/research/centers/CSMAPS/) and co-directs the UTHealth-MD Anderson Population Health Initiative. Prior to joining UTHealth, she was an Associate Director of Early Clinical Development Research at Pfizer Inc. and an Assistant Professor at Brown University. More information about Dr. Bauer's work can be found [HERE](https://cicibauer.netlify.app/project).
-
-  - name: Qian Xiao, PhD, MPH
-    role: Associate Professor
-    photo: people/qian-xiao.jpg
-    uthealth: https://sph.uth.edu/faculty/?fac=qThq0qG13JMZs1JrGDpCVw==
-    scholar: https://scholar.google.com/citations?hl=en&user=nxmqYmwAAAAJ&view_op=list_works&sortby=pubdate
-    linkedin: https://www.linkedin.com/in/qianxiao/
-    bio: |
-      Dr. Xiao is a tenured faculty member at UTHealth and a PI member of NASA's Health and Air Quality Applied Sciences Team. She obtained her PhD in Biological Sciences from the University of California, San Diego, and was a Cancer Prevention Fellow at the National Cancer Institute. Her current research focuses on understanding the health consequences of sleep deficiency and circadian dysfunction by integrating factors at the individual, biological, and contextual levels. She has conducted epidemiological investigations on sleep deficiency in relation to obesity, cancer, and other chronic conditions. Before joining UTHealth, she was an Assistant Professor at the University of Iowa.
+      Ethan was a graduate research assistant with HANG during his MPH in Environmental Health and Epidemiology at the Rollins School of Public Health of Emory University. Prior to his MPH, he earned a BS in Genetics and Genomics from the University of California, Davis. His research examines the relationships between air pollution, extreme weather exposures, and population health outcomes. He leverages satellite remote sensing to analyze these complex interactions and empower communities with actionable insights. After completing his MPH, Ethan became an MD candidate at the University of Colorado. In the future, he hopes to become a practicing physician.
